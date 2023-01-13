@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const controller_1 = require("./controller");
+const router = (0, express_1.Router)();
+router.get("/", controller_1.handleGetAllNFTs);
+router.get("/isCheck/:user", controller_1.handleIsTypeMinted);
+router.get("/count/:type", controller_1.getCount);
+router.get("/pre/:userPublicKey", controller_1.handleCheckMinted);
+router.post("/adddata", controller_1.AddDatatoDB);
+router.get("/nftdata", controller_1.handleGetNFTData);
+router.post("/premint", controller_1.handlePreMint);
+router.post("/create", controller_1.handleCreateNFT);
+router.post("/update", controller_1.handleUpdateNFT);
+exports.default = router;

@@ -1,0 +1,71 @@
+POST http://localhost:8000/api/nft/create
+content-type: application/json
+
+{
+    "account": "9kpML3MhVLPmASMDBYuaMzmFiCtdm3aityWu1pJZ1wR4"
+}
+
+###
+
+
+POST https://miningpratik.herokuapp.com/api/nft
+content-type: application/json
+
+{
+    "account": "9iSD3wkC1aq3FcwgjJfEua9FkkZJWv7Cuxs6sKjc3VnR"
+}
+
+###
+
+POST http://localhost:5000/api/nft/create
+content-type: application/json
+
+{
+    "userPublicKey": "8GcrEBqb1rmCM7LBStCCfuuWTHSSVWTK6w5p2FHsNr9X",
+    "usdToGari":10,
+    "badge":"BasicCreatorBadge",
+    "type":"Creator"
+}
+
+###
+
+
+POST http://localhost:5000/api/nft/update
+content-type: application/json
+
+{
+    "userPublicKey": "9iSD3wkC1aq3FcwgjJfEua9FkkZJWv7Cuxs6sKjc3VnR",
+    "usdToGari":10,
+    "badge":"BasicCreatorBadge",
+    "type":"Creator",
+    "mint":"6h9arRdwUy7CR6KCFqfW13vL11iN6a1uK41UJtc5gDdM"
+}
+
+###
+
+GET http://localhost:5000/api/nft/?type=Creator&name=BronzeCreatorBadge
+content-type: application/json
+
+
+###
+
+GET https://nft-badge-service.chingari.io/api/nft/count/Creator
+
+
+###
+
+GET http://localhost:5000/api/nft/isCheck/CsEYyFxVtXxezfLTUWYwpj4ia5oCAsBKznJBWiNKLyxK
+
+
+###
+
+POST http://localhost:5000/api/nft/premint
+content-type: application/json
+
+{
+    "userPublicKey": "CsEYyFxVtXxezfLTUWYwpj4ia5oCAsBKznJBWiNKLyxK",
+    "type": "User"
+}
+
+###
+GET https://nft-badge-service.chingari.io/api/nft/isCheck/3aTJ4xj2xXVfP4MiPsT1PP9QToe4mj6oAT6CXiui99zw
